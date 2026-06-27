@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-cream: #F1EDE1;
+    --ink: #544E42;
+    --blossom-pink: #E4C0C0;
+    --flag-red: #B1001D;
+    --fan-tan: #DBCCAD;
+    --background: 45 27% 92%;
+    --foreground: 37 12% 29%;
+    --card: 37 27% 83%;
+    --card-foreground: 37 12% 29%;
+    --popover: 45 27% 92%;
+    --popover-foreground: 37 12% 29%;
+    --primary: 349 100% 35%;
+    --primary-foreground: 45 27% 92%;
+    --secondary: 37 27% 83%;
+    --secondary-foreground: 37 12% 29%;
+    --muted: 37 27% 83%;
+    --muted-foreground: 37 8% 45%;
+    --accent: 0 38% 82%;
+    --accent-foreground: 37 12% 29%;
+    --destructive: 349 100% 35%;
+    --destructive-foreground: 45 27% 92%;
+    --border: 37 20% 75%;
+    --input: 37 20% 75%;
+    --ring: 349 100% 35%;
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    background-color: var(--bg-cream);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: var(--blossom-pink);
+    color: var(--ink);
+  }
+}
+
+@layer components {
+  .font-display {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+
+  .font-body {
+    font-family: 'DM Sans', system-ui, sans-serif;
+  }
+
+  .text-ink {
+    color: var(--ink);
+  }
+
+  .bg-cream {
+    background-color: var(--bg-cream);
+  }
+
+  .bg-fan-tan {
+    background-color: var(--fan-tan);
+  }
+
+  .border-ink-light {
+    border-color: rgba(84, 78, 66, 0.2);
+  }
+}
+
+@layer utilities {
+  .grain-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+  }
+}
